@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Calcultor By Zenith 8038 & 8075 Jesis-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <br><br>
+    <h1 style="text-align: center;">Calculator</h1>
+    <div class="wrapper">
+        <div class="container">
+            <div class="content">
+                <input type="number" id="n1">
+                <select id="opt">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">x</option>
+                    <option value="/">÷</option>
+                </select>
+                <input type="number" id="n2">
+                <button onclick="a()">Calcualte</button><br>
+                <center>
+                    <div id="result">
+                        Result Will Appear Here
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+<script>function a() {
+    let n1 = parseInt( document.getElementById("n1").value);
+    let n2 = parseInt( document.getElementById("n2").value);
+     let opt = document.getElementById("opt").value;
+     let result = document.getElementById("result");
+        if (opt === "+") {
+            result.innerHTML = n1+n2;
+        }
+        if (opt === "-") {
+            result.innerHTML = n1-n2;
+        }
+        if (opt === "*") {
+            result.innerHTML = n1*n2;
+        }
+        if (opt === "/") {
+            result.innerHTML = n1/n2;
+        }
+    }
+    </script>
+    <style>.wrapper{
+        position: absolute;
+        -webkit-box-shadow: 7px 5px 15px 5px grey; 
+        box-shadow: 7px 5px 15px 5px grey;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);   
+    }
+    .container{
+        background: #000;
+        height: 150px;
+        width: 540px;
+    }
+    .content{
+        padding-top: 60px;
+        padding-left:55px;
+        height: 150px;
+        width: 500px;
+    }
+    input, select{
+        border-radius: 10%;
+    }
+    #result{
+        height: 20px;
+        width: 220px;
+        background: #fff;
+        position: absolute;
+        top: 100px;
+        left: 145px;
+    }
+    body{
+        background-size: cover;
+        
+        background-image:  linear-gradient(90deg, rgba(65,148,18,1) 0%, rgba(53,252,34,1) 33%, rgba(12,255,114,1) 59%, rgba(6,255,126,1) 63%, rgba(5,221,222,1) 100%);    
+    }
+    *{
+        user-select: none;
+    }
+    button, select, option{
+        cursor:pointer;
+    }</style>
+</body>
+
+</html>
